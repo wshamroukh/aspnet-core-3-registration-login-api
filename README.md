@@ -1,15 +1,20 @@
-# aspnet-core-3-registration-login-api
+# vue-vuex-registration-login-example
+Vue + Vuex - User Registration and Login Tutorial & Example
 
-ASP.NET Core 3.1 - Simple API for User Management, Authentication and Registration
+To see a demo and further details go to http://jasonwatmore.com/post/2018/07/14/vue-vuex-user-registration-and-login-tutorial-example
 
-For documentation and instructions check out https://jasonwatmore.com/post/2019/10/14/aspnet-core-3-simple-api-for-authentication-registration-and-user-management
-
-# fullstackwebapp
+# full stack webapp
 This is a full stack web app that consists of frontend (vue), backend API (.net core), and a SQL DB.
 
 You can deploy this solution on Azure PaaS services. Follow the steps bellow:
 
-1. Create a two Azure App Services that will be used for front and backend apps
+1. Create a two Azure App Services that will be used for front and backend apps as follows:
+    > #### Frontend: 
+      - Create an App Service with **Node 16/18 LTS** as Runtime stack.
+      - Once created, go to app service --> configuration --> general settings, and put this command in the **startup command** box: `pm2 serve /home/site/wwwroot --no-daemon --spa` and save
+
+    > #### Backend API:
+      - Create an App Service with **.NET 6/7** as Runtime stack.
 2. Create an [Azure SQL DB](https://docs.microsoft.com/en-us/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal)
 3. Clone the repo locally by running the command:
 ```
@@ -73,5 +78,3 @@ npm run build
 </configuration>
 ```
 21. Test now by accessing the frontend Azure Web App Service URL.
-
-
